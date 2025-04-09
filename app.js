@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const contentDiv = document.getElementById("content");
     const dynamicMenu = document.getElementById("dynamicMenus");
@@ -22,7 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="#"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="#" class="btn"> Contact me</a>
+                <button class="contact" id="contact" onClick="showForm()"> Contact me</button>
+                <div id="contactForm" class="contact-container">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                        <div class ="contact-left-title">
+                            <h2>Send me an email.</h2>
+                            <hr>
+                        </div>
+                        <input type="hidden" name="access_key" value="c6c3892d-066b-4ae2-8556-7d873407b9c0">
+                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" autocomplete="off" required>
+                        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" autocomplete="off" required required>
+                        <textarea name="message" placeholder="Your Message" class="contact-inputs" autocomplete="off" required></textarea>
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <button type="submit">Submit </button>
+                    </form>
+                </div>
         </div>
     </section>
         `,
@@ -38,11 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `,
         Experience: `
     <section class ="experience">
-        <h1> WIP </h1>
-    </section>
-        `,
-        Contact: `
-    <section class ="contact">
         <h1> WIP </h1>
     </section>
         `,
@@ -79,3 +89,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadPage(window.location.hash);
 });
+
+function showForm(){
+    var contactForm = document.getElementById("contactForm");
+    var contactMe = document.getElementById("contact");
+    if(contactForm.style.display === "block"){
+        contactForm.style.display = "none";
+        contactMe.textContent = "Contact me";
+    }
+    else{
+        contactForm.style.display = "block";
+        contactMe.textContent = "Hide";
+    }
+}
+
+// const contactMe = document.getElementById("contact");
+// const contactForm = document.getElementById("contactForm")
+
+// contactMe.addEventListener("click", event => {
+
+//     if(contactForm.style.visibility === 'visible')
+//     {
+//         contactForm.style.visibility = 'hidden';
+//         contactMe.textContent = "Contact me";
+//     }
+//     else{
+//         contactForm.style.visibility = 'visible';
+//         contactMe.textContent = "Hide";
+//     }
+    
+// });
