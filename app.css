@@ -24,7 +24,7 @@ body{
 
 header{
     margin-top: 20px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -128,7 +128,7 @@ span{
 }
 
 .home-content p{
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 
 .home-img{
