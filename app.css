@@ -127,6 +127,10 @@ span{
     font-weight: 700;
 }
 
+.home-content p{
+    font-size: 1rem;
+}
+
 .home-img{
     border-radius: 50%;
   }
@@ -222,19 +226,15 @@ span{
 }
 
 @keyframes words {
-    0%, 25%{
+    0%, 33%{
         content:"Software Dev"
     }
-    26%, 50%{
+    34%, 66%{
         content:"Web Dev"
     }
-    51%, 75%{
+    67%, 100%{
         content:"Data Analyst"
     }
-    76%, 100%{
-        content:"Creative"
-    }
-
 }
 
 @media (max-width:1000px){
